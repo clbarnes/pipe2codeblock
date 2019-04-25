@@ -1,0 +1,24 @@
+language: python
+
+matrix:
+  include:
+    - python: 3.7
+      dist: xenial
+      sudo: true
+    - python: 3.6
+    - python: 3.5
+    - python: 3.4
+    - python: "3.8-dev"
+      dist: xenial
+      sudo: true
+  allow_failures:
+    - python: "3.8-dev"
+
+notifications:
+  email: false
+
+install: pip install .
+
+script:
+  - p2c --help | p2c README.md
+  - git diff --exit-code
