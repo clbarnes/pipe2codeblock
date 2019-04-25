@@ -1,6 +1,6 @@
 # pipe2codeblock
 
-Put some arbitrary text into a codeblock in a markdown file.
+Pipe text into a code block in a markdown file.
 
 Originally designed for putting a terminal command's `--help` text into a `README.md`.
 
@@ -20,7 +20,7 @@ your_awesome_tool --help | p2c README.md
 to pipe the text in, or
 
 ```bash
-p2c README.md input_file 
+p2c README.md input_file.txt
 ```
 
 to read from a file.
